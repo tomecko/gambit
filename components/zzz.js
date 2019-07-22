@@ -23,7 +23,7 @@ var ZzzPage = Vue.component('Zzz', {
 `,
   data: function() {
     return {
-      email: '',
+      email: 'a@a',
       pending: false,
     }
   },
@@ -33,11 +33,11 @@ var ZzzPage = Vue.component('Zzz', {
   methods: {
     onSubmit: function() {
       this.pending = true;
-      fetch('/contact-form.php', {
+      fetch('contact-form.php', {
         method: 'POST',
         body: JSON.stringify({
           email: this.email,
-          history: this.$root.$data.store.history,
+          history: this.$root.history,
         }),
       }).then(
         () => {
