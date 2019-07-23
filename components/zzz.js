@@ -23,7 +23,7 @@ var ZzzPage = Vue.component('Zzz', {
 `,
   data: function() {
     return {
-      email: 'a@a',
+      email: '',
       pending: false,
     }
   },
