@@ -38,10 +38,12 @@ var ZzzPage = Vue.component('Zzz', {
         body: JSON.stringify({
           email: this.email,
           history: this.$root.history,
+          person: this.$root.person,
         }),
       }).then(
         () => {
           this.pending = false;
+          this.email = '';
         },
         () => {
           this.pending = false;

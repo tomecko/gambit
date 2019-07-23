@@ -18,8 +18,8 @@ $_POST = json_decode($rest_json, true);
 
 $log = date("Y-m-d H:i:s") . "\t" .
   $_POST["email"] . "\t" .
-  "person" . $_POST["person"] . "\t";
-  "history" . implode(",", $_POST["history"]) . "\n";
+  "person:" . $_POST["person"] . "\t" .
+  "history:" . implode(",", $_POST["history"]) . "\n";
 file_put_contents("protected/contact-form-logs.txt", $log, FILE_APPEND);
 
 if (in_array("bbb", $_POST["history"])) {
